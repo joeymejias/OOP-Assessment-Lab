@@ -11,6 +11,7 @@ public class Dragon extends Monster{
     private static Dragon dragon = null;
 
     private Dragon(){
+        super(5000, 500);
     }
 
     public static Dragon getInstance(){
@@ -22,6 +23,6 @@ public class Dragon extends Monster{
 
     @Override
     public String aboutMe() {
-        return "I am a Dragon with 3 health and do 8 damage!";
+        return "I am a Dragon with " + this.getHealth() + " and do " + this.getDamage() + " damage!";
     }
 }

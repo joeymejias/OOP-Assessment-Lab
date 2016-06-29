@@ -7,6 +7,11 @@ public abstract class Monster {
     private int health;
     private int damage;
 
+    public Monster(int health, int damage){
+        this.health = health;
+        this.damage = damage;
+    }
+
     public int getHealth(){
         return health;
     }

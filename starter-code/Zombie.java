@@ -9,6 +9,7 @@ public class Zombie extends Monster{
     private static Zombie zombie = null;
 
     public Zombie(){
+        super(1500, 100);
     }
 
     public static Zombie getInstance(){
@@ -20,6 +21,6 @@ public class Zombie extends Monster{
 
     @Override
     public String aboutMe() {
-        return "I am a Zombie with 4 health and do 10 damage!";
+        return "I am a Zombie with " + getHealth() + " health and do " + getDamage() + " damage!";
     }
 }
