@@ -1,5 +1,9 @@
 1. Describe the difference between a Class and an Object.
 
+- An Object is an instance of a class meaning that when the new keyword is used with the Class’s constructor it creates a new place in memory for the variable that holds the specific instance of the Class that was created.
+
+- An Object is at some point is garbage collected within its life span. Classes themselves to not change, but the variables inside the class do change when they are acted upon within the new instance of the Class that was created (the Object).
+
 
 2. What keyword do you use to turn a normal Class into a Subclass? (choose one)
   a. implements
@@ -7,21 +11,35 @@
   c. uses
   d. sub
 
+b. extends
+
 
 3. Describe the difference between public and private?
 
+Java documentation puts the difference as…
+
+“A class may be declared with the modifier public, in which case that class is visible to all classes everywhere. If a class has no modifier (the default, also known as package-private), it is visible only within its own package (packages are named groups of related classes…
+
+…At the member level, you can also use the public modifier or no modifier (package-private) just as with top-level classes, and with the same meaning. For members, there are two additional access modifiers: private and protected. The private modifier specifies that the member can only be accessed in its own class. The protected modifier specifies that the member can only be accessed within its own package (as with package-private) and, in addition, by a subclass of its class in another package.”
 
 4. Can a subclass access a private method of its parent class? (choose one)
   a. Yes
   b. No
 
+No.
 
 5. Define the term constructor.
 
+The Java documentation says “A class contains constructors that are invoked to create objects from the class blueprint. Constructor declarations look like method declarations—except that they use the name of the class and have no return type.”
+
+A constructor is a method that shares the same name as the class. The Java documentation says “You don't have to provide any constructors for your class, but you must be careful when doing this. The compiler automatically provides a no-argument, default constructor for any class without constructors. This default constructor will call the no-argument constructor of the superclass. In this situation, the compiler will complain if the superclass doesn't have a no-argument constructor so you must verify that it does. If your class has no explicit superclass, then it has an implicit superclass of Object, which does have a no-argument constructor.”
 
 6. Can you access a static method of a class without making an instance of it? (choose one)
   a. Yes
   b. No
 
+Yes.
 
 7. Describe the purpose of overriding a method.
+
+The purpose of overriding a method is to make the method unique to the particular class overriding it. An example of this is the List Class having the sub classes ArrayList and LinkedList. ArrayList and LinkedList can override methods from the list class to suit the behavior of ArrayList and LinkedList to make them unique.
