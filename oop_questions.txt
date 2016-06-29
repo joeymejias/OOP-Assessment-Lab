@@ -1,5 +1,7 @@
 1. Describe the difference between a Class and an Object.
 
+- A Class is a blueprint of an object. An Object is what is what is acted upon when a Class is instantiated.
+
 - An Object is an instance of a class meaning that when the new keyword is used with the Class’s constructor it creates a new place in memory for the variable that holds the specific instance of the Class that was created.
 
 - An Object is at some point is garbage collected within its life span. Classes themselves to not change, but the variables inside the class do change when they are acted upon within the new instance of the Class that was created (the Object).
@@ -28,6 +30,8 @@ Java documentation puts the difference as…
 
 No.
 
+According to the Java documentation “A subclass inherits all of the public and protected members of its parent, no matter what package the subclass is in. If the subclass is in the same package as its parent, it also inherits the package-private members of the parent.”
+
 5. Define the term constructor.
 
 The Java documentation says “A class contains constructors that are invoked to create objects from the class blueprint. Constructor declarations look like method declarations—except that they use the name of the class and have no return type.”
@@ -40,6 +44,10 @@ A constructor is a method that shares the same name as the class. The Java docum
 
 Yes.
 
+The Java documentation says “Sometimes, you want to have variables that are common to all objects. This is accomplished with the static modifier. Fields that have the static modifier in their declaration are called static fields or class variables. They are associated with the class, rather than with any object. Every instance of the class shares a class variable, which is in one fixed location in memory. Any object can change the value of a class variable, but class variables can also be manipulated without creating an instance of the class.”
+
 7. Describe the purpose of overriding a method.
 
 The purpose of overriding a method is to make the method unique to the particular class overriding it. An example of this is the List Class having the sub classes ArrayList and LinkedList. ArrayList and LinkedList can override methods from the list class to suit the behavior of ArrayList and LinkedList to make them unique.
+
+Overriding methods also takes place when the a parent or super class declares an abstract method for a child or subclass to implement. The child/subclass overriding the abstract method will create its own usage of the abstract method from the parent/super class.
